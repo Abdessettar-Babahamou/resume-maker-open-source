@@ -1,0 +1,1 @@
+ALTER TABLE "cv_profile" ALTER COLUMN "resum_Id" DROP NOT NULL;

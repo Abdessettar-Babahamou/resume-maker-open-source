@@ -1,0 +1,183 @@
+{
+  "id": "4aa9dd8c-16fb-444a-9b8d-66304545abee",
+  "prevId": "7e11676a-52e8-4034-810d-4271ad1f018d",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.cv_profile": {
+      "name": "cv_profile",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "fullName": {
+          "name": "fullName",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "emailAddress": {
+          "name": "emailAddress",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "phoneNumber": {
+          "name": "phoneNumber",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "linkdenUrl": {
+          "name": "linkdenUrl",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "personalWeb": {
+          "name": "personalWeb",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "countriy": {
+          "name": "countriy",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "State": {
+          "name": "State",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "City": {
+          "name": "City",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "resum_Id": {
+          "name": "resum_Id",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "cv_profile_resum_Id_resumes_id_fk": {
+          "name": "cv_profile_resum_Id_resumes_id_fk",
+          "tableFrom": "cv_profile",
+          "tableTo": "resumes",
+          "columnsFrom": [
+            "resum_Id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.resumes": {
+      "name": "resumes",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "resumes_user_id_users_id_fk": {
+          "name": "resumes_user_id_users_id_fk",
+          "tableFrom": "resumes",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.users": {
+      "name": "users",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "age": {
+          "name": "age",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "users_email_unique": {
+          "name": "users_email_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "email"
+          ]
+        }
+      }
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

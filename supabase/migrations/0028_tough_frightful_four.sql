@@ -1,0 +1,1 @@
+ALTER TABLE "cv_profile" ADD COLUMN "jobTitle" text;

@@ -1,0 +1,345 @@
+{
+  "id": "3dc8c1c1-42fb-41ea-af04-ec53c80d4342",
+  "prevId": "7b1bbf60-dfa8-47d5-8fac-1983b3d72675",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.cv_profile": {
+      "name": "cv_profile",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "fullName": {
+          "name": "fullName",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "emailAddress": {
+          "name": "emailAddress",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "phoneNumber": {
+          "name": "phoneNumber",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "linkdenUrl": {
+          "name": "linkdenUrl",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "personalWeb": {
+          "name": "personalWeb",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "countriy": {
+          "name": "countriy",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "State": {
+          "name": "State",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "City": {
+          "name": "City",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "resum_Id": {
+          "name": "resum_Id",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "cv_profile_resum_Id_resumes_id_fk": {
+          "name": "cv_profile_resum_Id_resumes_id_fk",
+          "tableFrom": "cv_profile",
+          "tableTo": "resumes",
+          "columnsFrom": [
+            "resum_Id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.educations_info": {
+      "name": "educations_info",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "schoolName": {
+          "name": "schoolName",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "degree": {
+          "name": "degree",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "filedStduy": {
+          "name": "filedStduy",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "startDate": {
+          "name": "startDate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "endDate": {
+          "name": "endDate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "countriy": {
+          "name": "countriy",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "State": {
+          "name": "State",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "resum_Id": {
+          "name": "resum_Id",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "educations_info_resum_Id_resumes_id_fk": {
+          "name": "educations_info_resum_Id_resumes_id_fk",
+          "tableFrom": "educations_info",
+          "tableTo": "resumes",
+          "columnsFrom": [
+            "resum_Id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.experinece_info": {
+      "name": "experinece_info",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "jobTitle": {
+          "name": "jobTitle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "employer": {
+          "name": "employer",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "startDate": {
+          "name": "startDate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "endDate": {
+          "name": "endDate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "countriy": {
+          "name": "countriy",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "State": {
+          "name": "State",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "resum_Id": {
+          "name": "resum_Id",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "experinece_info_resum_Id_resumes_id_fk": {
+          "name": "experinece_info_resum_Id_resumes_id_fk",
+          "tableFrom": "experinece_info",
+          "tableTo": "resumes",
+          "columnsFrom": [
+            "resum_Id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.resumes": {
+      "name": "resumes",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "resumes_user_id_users_id_fk": {
+          "name": "resumes_user_id_users_id_fk",
+          "tableFrom": "resumes",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.users": {
+      "name": "users",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "age": {
+          "name": "age",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "users_email_unique": {
+          "name": "users_email_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "email"
+          ]
+        }
+      }
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
