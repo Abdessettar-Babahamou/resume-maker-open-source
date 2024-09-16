@@ -9,7 +9,6 @@
 
 ![Screenshot of the app.](https://fegtjjduatozccqmlhzr.supabase.co/storage/v1/object/public/media/2.jpg?t=2024-09-15T19%3A29%3A19.352Z)
 
-![Screenshot of the app.](https://fegtjjduatozccqmlhzr.supabase.co/storage/v1/object/public/media/5.jpg?t=2024-09-15T19%3A29%3A52.334Z)
 
 ![Screenshot of the app.](https://fegtjjduatozccqmlhzr.supabase.co/storage/v1/object/public/media/4.jpg?t=2024-09-15T19%3A30%3A06.081Z)
 
